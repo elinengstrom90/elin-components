@@ -1,1 +1,1 @@
-# elin-components
+# elin-vs-js

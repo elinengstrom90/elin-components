@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Elin vs JS - Components</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <section class="c-section">
+        <div class="c-section__outer">
+            <div class="c-section__inner">
+                <h2>Carousel Component</h2>
+
+                <div class="c-carousel-example-a">
+
+                    <div class="c-carousel-example-a__outer">
+                        <div class="c-carousel-example-a__controls">
+                            <button class="c-button c-button--prev" data-fn-carousel-prev disabled>Prev</button>
+                            <button class="c-button c-button--next" data-fn-carousel-next>Next</button>
+                        </div>
+                        <ul class="c-list">
+                            <li class="c-item js-is-active" data-slide="1">
+                                <div class="c-carousel-example-a__placeholder">
+                                    <img class="c-image" src="https://picsum.photos/id/67/1024/576" alt="">
+                                </div>
+                            </li>
+                            <li class="c-item" data-slide="2">
+                                <div class="c-carousel-example-a__placeholder">
+                                    <img class="c-image" src="https://picsum.photos/id/121/1024/576" alt="">
+                                </div>
+                            </li>
+                            <li class="c-item" data-slide="3">
+                                <div class="c-carousel-example-a__placeholder">
+                                    <img class="c-image" src="https://picsum.photos/id/300/1024/576" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="c-section">
+        <div class="c-section__outer">
+            <div class="c-section__inner">
+                <h2>Collapse Component</h2>
+
+                <div class="c-collapse-example-a">
+                    <h3>Example A</h3>
+                    <button class="c-button" data-fn-collapse-button aria-expanded="false">Button</button>
+                    <div class="c-panel" data-fn-collapse-content aria-hidden="true">
+                        <span>Lorem ipsum dolor sit amet</span>
+                    </div>
+                </div>
+
+                <div class="c-collapse-example-b">
+                    <h3>Example B</h3>
+                    <button class="c-button" data-fn-collapse-button>Button</button>
+                    <ul class="c-list" data-fn-collapse-content>
+                        <li class="c-item">Item 1</li>
+                        <li class="c-item">Item 2</li>
+                        <li class="c-item">Item 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="c-section">
+        <div class="c-section__outer">
+            <div class="c-section__inner">
+                <h2>Tabs Component</h2>
+
+                <div class="c-tabs-example-a">
+                    <h3>Example A</h3>
+                    <ul class="c-list" role="tablist">
+                        <li class="c-item js-is-active" data-fn-tabs-item>
+                            <button id="tabs1-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="true">
+                                <span>Tab 1</span>
+                            </button>
+                        </li>
+                        <li class="c-item" data-fn-tabs-item>
+                            <button id="tabs2-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="false">
+                                <span>Tab 2</span>
+                            </button>
+                        </li>
+                        <li class="c-item" data-fn-tabs-item>
+                            <button id="tabs3-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="false">
+                                <span>Tab 3</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="c-tabs__content">
+                        <div class="c-panel js-is-active" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs1-label" aria-hidden="false">
+                            <span>Panel 1</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                        <div class="c-panel" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs2-label" aria-hidden="true">
+                            <span>Panel 2</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                        <div class="c-panel" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs3-label" aria-hidden="true">
+                            <span>Panel 3</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-tabs-example-b">
+                    <h3>Example B</h3>
+                    <ul class="c-list" role="tablist">
+                        <li class="c-item js-is-active" data-fn-tabs-item>
+                            <button id="tabs4-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="true">
+                                <span>Tab 1</span>
+                            </button>
+                        </li>
+                        <li class="c-item" data-fn-tabs-item>
+                            <button id="tabs5-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="false">
+                                <span>Tab 2</span>
+                            </button>
+                        </li>
+                        <li class="c-item" data-fn-tabs-item>
+                            <button id="tabs6-label" class="c-tab" data-fn-tabs-button role="tab" aria-selected="false">
+                                <span>Tab 3</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="c-tabs__content">
+                        <div class="c-panel js-is-active" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs4-label" aria-hidden="false">
+                            <span>Panel 1</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                        <div class="c-panel" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs5-label" aria-hidden="true">
+                            <span>Panel 2</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                        <div class="c-panel" data-fn-tabs-panel role="tabpanel" aria-labelledby="tabs6-label" aria-hidden="true">
+                            <span>Panel 3</span>
+                            <span>Lorem ipsum dolor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="c-section">
+        <div class="c-section__outer">
+            <div class="c-section__inner">
+                <h2>Accordion Component</h2>
+                
+                <div class="c-accordion-example-a">
+                    <h3>Example A</h3>
+                    <ul class="c-list c-list--col">
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion1-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion1">
+                                <span>Title 1</span>
+                            </button>
+                            <div id="accordion1" class="c-panel" aria-labelledby="accordion1-label" aria-hidden="true">
+                                <span>Panel 1</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion2-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion2">
+                                <span>Title 2</span>
+                            </button>
+                            <div id="accordion2" class="c-panel" aria-labelledby="accordion2-label" aria-hidden="true">
+                                <span>Panel 2</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion3-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion3">
+                                <span>Title 3</span>
+                            </button>
+                            <div id="accordion3" class="c-panel" aria-labelledby="accordion3-label" aria-hidden="true">
+                                <span>Panel 3</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="c-accordion-example-b">
+                    <h3>Example B</h3>
+                    <ul class="c-list c-list--col">
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion4-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion4">
+                                <span>Title 1</span>
+                            </button>
+                            <div id="accordion4" class="c-panel" aria-labelledby="accordion4-label" aria-hidden="true">
+                                <span>Panel 1</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion5-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion5">
+                                <span>Title 2</span>
+                            </button>
+                            <div id="accordion5" class="c-panel" aria-labelledby="accordion5-label" aria-hidden="true">
+                                <span>Panel 2</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                        <li class="c-item" data-fn-accordion-item>
+                            <button id="accordion6-label" class="c-button" data-fn-accordion-button aria-expanded="false" aria-controls="accordion6">
+                                <span>Title 3</span>
+                            </button>
+                            <div id="accordion6" class="c-panel" aria-labelledby="accordion6-label" aria-hidden="true">
+                                <span>Panel 3</span>
+                                <span>Lorem ipsum dolor</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/accordion.js" async></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/collapse.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+
+</html>

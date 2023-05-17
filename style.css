@@ -1,0 +1,370 @@
+:root {
+
+    --gray-500: #bbbbbb;
+    --gray-300: #cfcfcf;
+    --gray-200: #d8d8d8;
+    --gray-100: #e2e2e2;
+
+    --blue-50: #e3e8fe;
+    --blue-500: #0528ca;
+    --blue-600: #0524b7;
+    --blue-700: #0420a4;
+
+    --green-50: #f6fefc;
+    --green-200: #1bd9a9;
+    --green-500: #19c89b;
+    --green-700: #17b78d;
+
+    --peach-500: #ffcfc7;
+    --peach-700: #ffbeb3;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 16px;
+    margin: 0 0 40px 0;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input:focus {
+    border-color: var(--gray-500);
+    outline: none;
+}
+
+input[type=checkbox] {
+    accent-color: var(--gray-500);
+    height: 20px;
+    width: 20px;
+    margin: 0 16px 0 0;
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+input:checked {
+    accent-color: var(--gray-200);
+}
+
+input:checked + label {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+button {
+    border: 0;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: auto;
+}
+
+.c-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.c-section--top {
+    background: var(--gray-200);
+}
+
+.c-section__outer {
+    max-width: 1024px;
+    width: 100%;
+}
+
+.c-section__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.c-section__inner:not(:first-of-type) {
+    margin-top: 80px;
+}
+
+.c-section__inner.c-section__inner--col {
+    flex-direction: row;
+}
+
+/*
+    Accordion Component
+*/
+
+.c-accordion-example-a,
+.c-accordion-example-b {
+    margin-bottom: 60px;
+}
+
+.c-accordion-example-a .c-panel,
+.c-accordion-example-b .c-panel {
+    display: none;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 24px 32px;
+}
+
+.c-accordion-example-a .c-item.js-is-active .c-panel,
+.c-accordion-example-b .c-item.js-is-active .c-panel {
+    display: block;
+}
+
+.c-accordion-example-a .c-item,
+.c-accordion-example-b .c-item {
+    margin-bottom: 16px;
+}
+
+.c-accordion-example-a .c-button,
+.c-accordion-example-b .c-button {
+    border-radius: 4px;
+    background: var(--gray-200);
+    display: flex;
+    font-size: 1rem;
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.c-accordion-example-a .c-button:hover,
+.c-accordion-example-b .c-button:hover {
+    background: var(--gray-500);
+}
+
+/*
+    Tabs Component
+*/
+
+.c-tabs-example-a,
+.c-tabs-example-b {
+    margin-bottom: 60px;
+}
+
+.c-tabs-example-a .js-is-active .c-tab,
+.c-tabs-example-b .js-is-active .c-tab {
+    background: #c5f1e6;
+}
+
+.c-tabs-example-a .c-item:first-child .c-tab,
+.c-tabs-example-b .c-item:first-child .c-tab {
+    border-top-left-radius: 4px;
+}
+
+.c-tabs-example-a .c-item:last-child .c-tab,
+.c-tabs-example-b .c-item:last-child .c-tab {
+    border-top-right-radius: 4px;
+}
+
+.c-tabs-example-a .c-panel,
+.c-tabs-example-b .c-panel {
+    display: none;
+    background: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 24px 32px;
+}
+
+.c-tabs-example-a .c-panel.js-is-active,
+.c-tabs-example-b .c-panel.js-is-active {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    Dropdown Component
+*/
+
+.c-dropdown {
+    margin-bottom: 60px;
+}
+
+.c-dropdown__button {
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+
+.c-dropdown__content {
+    display: none;
+    background: white;
+    border-radius: 4px;
+}
+
+.c-dropdown__content--visible {
+    display: flex;
+}
+
+/*
+    Collapse component
+*/
+
+.c-collapse-example-a,
+.c-collapse-example-b {
+    margin-bottom: 80px;
+}
+
+.c-collapse-example-b .c-list {
+    display: none;
+    background: white;
+}
+
+.c-collapse-example-b .c-item {
+    padding: 16px 32px;
+}
+
+.c-collapse-example-a .c-panel {
+    display: none;
+    background: white;
+    border-radius: 4px;
+    margin-top: 16px;
+    padding: 16px 32px;
+}
+
+.c-collapse-example-a .c-panel.js-is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    Carousel component
+*/
+
+.c-carousel-example-a__outer {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.c-carousel-example-a__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //padding-top: 56.25%;
+    position: relative;
+}
+
+.c-carousel-example-a img {
+    height: 100%;
+    //position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.c-carousel-example-a .c-item {
+    display: none;
+    width: 100%;
+}
+
+.c-carousel-example-a .c-item.js-is-active {
+    display: block;
+}
+
+.c-carousel-example-a__controls {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 16px;
+}
+
+.c-carousel-example-a .c-button:disabled {
+    background: var(--gray-100);
+}
+
+/*
+    Global components
+*/
+
+.c-button {
+    background: #c5f1e6;
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+
+.c-button:hover {
+    background: #b2edde;
+}
+
+.c-image {
+    background: var(--gray-100);
+    display: block;
+}
+
+.c-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-list.c-list--col {
+    flex-direction: column;
+}
+
+.c-list.js-is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-tab {
+    background: var(--gray-100);
+    background: #d9f6ee;
+    padding: 16px 32px;
+}
+
+.c-tab:hover {
+    background: var(--gray-300);
+    background: #c5f1e6;
+}
+
+.c-tab.js-is-active {
+    background: var(--gray-300);
+    background: #c5f1e6;
+}
+
+/*
+    Script classes
+*/
+
+.js-is-open {
+    display: flex;
+}
